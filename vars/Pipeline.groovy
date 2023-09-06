@@ -1,6 +1,6 @@
 package org.example
 
-class pipeline {
+class Pipeline {
     def callClone(repoUrl) {
         // Your clone logic here
         sh "git clone ${repoUrl}"
