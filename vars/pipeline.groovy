@@ -3,7 +3,7 @@
 // class Pipeline {
 def callClone(repoUrl) {
     // Your clone logic here
-    git '${repoUrl}'
+    git ${repoUrl}
 }
 
 // def callBuild(targetDir) {
