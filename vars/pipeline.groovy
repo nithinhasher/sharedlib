@@ -1,7 +1,7 @@
 // package org.example
 
 // class Pipeline {
-def call(string repoUrl) {
+def checkOutFrom(string repoUrl) {
     // Your clone logic here
     git url: ${repoUrl}
 }
