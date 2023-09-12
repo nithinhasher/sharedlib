@@ -1,11 +1,16 @@
 // package org.example
 
 // class Pipeline {
-def abc(string repoUrl) {
-    // Your clone logic here
-    git url: ${repoUrl}
+// def abc(string repoUrl) {
+//     // Your clone logic here
+//     git url: ${repoUrl}
+// }
+def call(String repoUrl, String branch){
+   def workingDir = "${env.WORKSPACE}"
+   sh "git clone ${repoUrl} ${workingDir}"
+   sh "git checkout ${branch}"
+   return workingDir
 }
-
 // def callBuild(targetDir) {
 //     // Your build logic here
 //     dir(targetDir) {
