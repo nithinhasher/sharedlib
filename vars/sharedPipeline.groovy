@@ -6,6 +6,18 @@ def cloneRepo(String repoUrl){
 // def callname(name){
 //   echo "Hey ${name}, How are you!!.."
 // }
+def callCompile(targetDir) {
+    // Your build logic here
+    dir(targetDir) {
+        sh "mvn compile"
+    }
+}
+def callTest(targetDir) {
+    // Your build logic here
+    dir(targetDir) {
+        sh "mvn test"
+    }
+}
 def callBuild(targetDir) {
     // Your build logic here
     dir(targetDir) {
