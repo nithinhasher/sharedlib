@@ -8,9 +8,9 @@ def cloneRepo(String repoUrl){
 // }
 def callBuild(targetDir) {
     // Your build logic here
-    // dir(targetDir) {
+    dir(targetDir) {
         sh "mvn clean install"
-    // }
+    }
 }
 
 
