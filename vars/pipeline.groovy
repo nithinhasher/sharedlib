@@ -1,9 +1,9 @@
 // package org.example
 
 // class Pipeline {
-def callClone(repoUrl) {
+def call(string repoUrl) {
     // Your clone logic here
-    git ${repoUrl}
+    git url: repoUrl
 }
 
 // def callBuild(targetDir) {
