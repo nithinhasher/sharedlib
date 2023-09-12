@@ -5,7 +5,7 @@
 //     // Your clone logic here
 //     git url: ${repoUrl}
 // }
-def call(String repoUrl, String branch){
+def cloneRepository(String repoUrl, String branch){
    def workingDir = "${env.WORKSPACE}"
    sh "git clone ${repoUrl} ${workingDir}"
    sh "git checkout ${branch}"
